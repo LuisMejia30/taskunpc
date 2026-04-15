@@ -1,15 +1,14 @@
-import { tareasIniciales } from "../data/tareas";
+import { useTareas } from "../context/TareasContext";
 import TareaCard from "./TareaCard";
 
 const ListaTareas = () => {
+  const { tareas } = useTareas();
+
   return (
     <div>
-      <h2>Lista de Tareas</h2>
-
-      {tareasIniciales.map((tarea) => (
+      {tareas.map((tarea) => (
         <TareaCard key={tarea.id} tarea={tarea} />
       ))}
-
     </div>
   );
 };
