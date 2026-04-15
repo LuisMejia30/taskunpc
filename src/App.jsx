@@ -1,9 +1,13 @@
+import Header from "./components/Header";
+import ListaTareas from "./components/ListaTareas";
+
 function App() {
   return (
     <div>
-      <h1>TaskUPC — Mi Gestor Académico</h1>
-      <h2>By Luis Mejia LM</h2>
+      <Header pendientes={3} />
+      <ListaTareas />
     </div>
   );
 }
+
 export default App;
